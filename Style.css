@@ -1,0 +1,150 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #548687;
+    text-align: center
+}
+h1{
+    font-size: 8vmin;
+    margin-top: 35px;
+    color: #fff
+}
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+    font-size: 8vmin;
+    color: #b0413e;
+    background-color: #ffffc7;
+}
+#Reset{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #b0413e;
+    color: #fff;
+    font-size: 3vmin;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #548687;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: clamp(28px, 8vmin, 60px);
+  margin-top: 35px;
+  color: #fff;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.game {
+  width: min(90vw, 60vmin);
+  height: min(90vw, 60vmin);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: clamp(6px, 1.5vmin, 14px);
+}
+
+.box {
+  width: calc((100% - 2 * clamp(6px, 1.5vmin, 14px)) / 3);
+  height: calc((100% - 2 * clamp(6px, 1.5vmin, 14px)) / 3);
+
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+
+  font-size: clamp(30px, 8vmin, 70px);
+  color: #b0413e;
+  background-color: #ffffc7;
+}
+
+.box {
+  transition:
+    transform 0.15s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.35);
+}
+
+.box:active {
+  transform: scale(0.95);
+}
+
+#Reset {
+  margin: 15px auto 25px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: none;
+  background-color: #b0413e;
+  color: #fff;
+
+  font-size: clamp(14px, 3vmin, 22px);
+  cursor: pointer;
+}
+
+#Reset {
+  transition:
+    transform 0.15s ease,
+    opacity 0.2s ease;
+}
+
+#Reset:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+#Reset:active {
+  transform: scale(0.95);
+}
+
+.win {
+  background-color: #b0413e !important;
+  color: #fff !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  transform: scale(1.08);
+}
